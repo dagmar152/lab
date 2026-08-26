@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Steun de nieuwe middelbare school in Ranst — Kromstraat</title>
+<meta name="description" content="Steun de nieuwe middelbare school in Ranst (Kromstraat). Maak in 5 minuten een positieve melding aan de gemeente als voorstander." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#3aa17e;
+    --green-dark:#2c7d61;
+    --ink:#2b2b2b;
+    --muted:#5d6b66;
+    --sand:#f4f1ea;
+    --cream:#faf8f3;
+    --line:#e4e0d6;
+    --accent:#f2b705;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Open Sans',system-ui,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;}
+  h1,h2,h3,h4,.brand{font-family:'Poppins',sans-serif;}
+  a{color:var(--green-dark);}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  .nav{max-width:1140px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--green-dark);letter-spacing:.5px;font-size:15px;text-decoration:none;}
+  .brand .logo{width:42px;height:42px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:'Poppins';font-weight:800;font-size:20px;flex:none;}
+  .brand small{display:block;font-weight:600;color:var(--muted);font-size:11px;letter-spacing:1px;}
+  nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap;}
+  nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;}
+  nav a:hover{color:var(--green-dark);}
+  .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:13px 22px;border-radius:40px;font-weight:700;font-family:'Poppins';font-size:15px;border:none;cursor:pointer;transition:.2s;text-align:center;}
+  .btn:hover{background:var(--green-dark);transform:translateY(-1px);}
+  .btn.big{padding:16px 30px;font-size:17px;}
+  .btn.gold{background:var(--accent);color:#3a2e00;}
+  .btn.gold:hover{background:#d9a400;}
+
+  .hero{background:linear-gradient(135deg,#eaf5f0 0%,#f7f4ec 100%);padding:70px 20px 60px;}
+  .hero-in{max-width:960px;margin:0 auto;text-align:center;}
+  .kicker{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--green-dark);font-weight:700;font-size:13px;letter-spacing:1px;padding:7px 16px;border-radius:40px;text-transform:uppercase;margin-bottom:22px;}
+  .hero h1{font-size:clamp(30px,5vw,50px);line-height:1.15;margin:0 0 18px;color:var(--ink);}
+  .hero h1 span{color:var(--green-dark);}
+  .hero p.lead{font-size:19px;color:var(--muted);max-width:720px;margin:0 auto 30px;}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .deadline{margin-top:26px;font-weight:700;color:#a8410f;font-size:15px;background:#fff3e6;border:1px solid #f6d3ab;display:inline-block;padding:10px 18px;border-radius:10px;}
+
+
+  section{padding:64px 20px;}
+  .wrap{max-width:1140px;margin:0 auto;}
+  .section-head{text-align:center;max-width:760px;margin:0 auto 44px;}
+  .section-head h2{font-size:clamp(26px,3.5vw,36px);margin:0 0 14px;}
+  .section-head p{color:var(--muted);font-size:17px;margin:0;}
+  .alt{background:var(--sand);}
+
+  .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px;box-shadow:0 6px 18px rgba(44,125,97,.06);}
+  .card .ic{font-size:30px;margin-bottom:12px;display:block;}
+  .card h3{margin:0 0 10px;font-size:19px;}
+  .card p{margin:0;color:var(--muted);font-size:15px;}
+
+  .steps{counter-reset:step;display:grid;gap:20px;max-width:820px;margin:0 auto;}
+  .step{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
+  .step::before{counter-increment:step;content:counter(step);flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;font-family:'Poppins';font-weight:800;font-size:20px;display:grid;place-items:center;}
+  .step h3{margin:0 0 6px;font-size:18px;}
+  .step p{margin:0;color:var(--muted);font-size:15px;}
+  .step a{font-weight:700;}
+
+  .copybox{max-width:840px;margin:0 auto;background:#fff;border:2px solid var(--green);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(44,125,97,.10);}
+  .copybox .bar{background:var(--green);color:#fff;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+  .copybox .bar strong{font-family:'Poppins';font-size:16px;}
+  .copybox .bar button{background:#fff;color:var(--green-dark);border:none;border-radius:30px;padding:9px 18px;font-weight:700;cursor:pointer;font-family:'Poppins';font-size:14px;}
+  .copybox .bar button:hover{background:var(--sand);}
+  #bezwaartekst{padding:26px 28px;font-size:15px;color:#333;white-space:pre-wrap;}
+  #bezwaartekst .first{font-weight:700;color:var(--green-dark);}
+  .note{max-width:840px;margin:16px auto 0;color:var(--muted);font-size:14px;text-align:center;}
+
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 20px;margin:0 auto 14px;max-width:840px;}
+  details summary{cursor:pointer;font-weight:700;font-family:'Poppins';padding:14px 0;list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";float:right;color:var(--green);font-size:22px;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{color:var(--muted);margin:0 0 16px;font-size:15px;}
+
+  .band{background:var(--green);color:#fff;text-align:center;}
+  .band h2{color:#fff;font-size:clamp(26px,4vw,38px);margin:0 0 14px;}
+  .band p{color:#e7f4ee;font-size:18px;max-width:640px;margin:0 auto 28px;}
+
+  .choice{background:linear-gradient(135deg,#eaf5f0 0%,#f7f4ec 100%);}
+  .choice-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:900px;margin:0 auto;}
+  .choice-card{border-radius:16px;padding:28px 26px;border:2px solid var(--line);background:#fff;}
+  .choice-card.good{border-color:var(--green);}
+  .choice-card.bad{border-color:#e0b3a0;background:#fdf6f2;}
+  .choice-card h3{margin:0 0 12px;font-size:20px;display:flex;align-items:center;gap:10px;}
+  .choice-card ul{margin:0;padding-left:20px;color:var(--muted);font-size:15px;}
+  .choice-card ul li{margin-bottom:8px;}
+  .choice-note{max-width:900px;margin:26px auto 0;text-align:center;font-size:17px;color:var(--ink);font-weight:600;}
+
+  footer{background:#20342d;color:#cfe0d8;padding:44px 20px;font-size:14px;}
+  footer .wrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+  footer h4{color:#fff;margin:0 0 12px;font-size:16px;}
+  footer a{color:#a9d7c4;}
+  footer .disc{max-width:1140px;margin:26px auto 0;border-top:1px solid #33493f;padding-top:18px;color:#8fa79c;font-size:12.5px;}
+
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:#20342d;color:#fff;padding:12px 22px;border-radius:40px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:100;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  /* ---------- Algemeen: geen horizontale scroll, nette anker-offset ---------- */
+  body{overflow-x:hidden;-webkit-text-size-adjust:100%;}
+  section{scroll-margin-top:86px;}
+  img,svg{max-width:100%;height:auto;}
+
+  /* ---------- Tablet ---------- */
+  @media (max-width:900px){
+    .nav{padding:12px 16px;gap:12px;}
+    nav ul{gap:16px;}
+    section{padding:52px 18px;}
+  }
+
+  /* ---------- Mobiel: header scrollt mee weg ---------- */
+  @media (max-width:720px){
+    /* Header niet langer sticky: neemt geen permanente schermruimte in */
+    header.site{position:static;backdrop-filter:none;background:#fff;}
+    section{scroll-margin-top:12px;}
+
+    .nav{
+      flex-wrap:wrap;padding:10px 14px;gap:10px;
+      justify-content:space-between;align-items:center;
+    }
+    .brand{font-size:12px;line-height:1.25;gap:9px;flex:1 1 auto;min-width:0;}
+    .brand .logo{width:34px;height:34px;font-size:16px;}
+    .brand small{font-size:9.5px;letter-spacing:.5px;}
+    .nav > .btn{padding:10px 16px;font-size:13.5px;flex:none;}
+
+    /* Nav-links: één rij die horizontaal scrolt i.p.v. over 3 regels te wrappen */
+    nav{
+      order:3;flex:1 1 100%;
+      overflow-x:auto;-webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      margin:0 -14px;padding:2px 14px 4px;
+    }
+    nav::-webkit-scrollbar{display:none;}
+    nav ul{flex-wrap:nowrap;gap:18px;}
+    nav ul li{flex:none;}
+    nav a{font-size:13.5px;white-space:nowrap;display:block;padding:4px 0;}
+
+    /* Hero compacter */
+    .hero{padding:34px 18px 40px;}
+    .kicker{font-size:11px;padding:6px 13px;margin-bottom:16px;letter-spacing:.5px;}
+    .hero p.lead{font-size:16.5px;margin-bottom:24px;}
+    .hero-cta{flex-direction:column;gap:10px;}
+    .hero-cta .btn{width:100%;}
+    .btn.big{padding:15px 22px;font-size:16px;}
+    .deadline{font-size:14px;padding:10px 14px;margin-top:20px;}
+
+    /* Secties en kaarten */
+    section{padding:44px 18px;}
+    .section-head{margin-bottom:30px;}
+    .section-head p{font-size:16px;}
+    .grid{gap:16px;grid-template-columns:1fr;}
+    .card{padding:22px 20px;border-radius:14px;}
+    .card h3{font-size:17.5px;}
+
+    /* Stappen: nummer boven de tekst i.p.v. ernaast */
+    .steps{gap:14px;}
+    .step{padding:18px 18px;gap:14px;flex-direction:column;}
+    .step::before{width:38px;height:38px;font-size:18px;}
+    .step h3{font-size:17px;}
+    .step p{font-size:14.5px;word-break:break-word;}
+
+    /* Kopieerblok: tekst schuift niet buiten het scherm */
+    .copybox .bar{padding:12px 16px;}
+    .copybox .bar button{width:100%;padding:11px 16px;}
+    #bezwaartekst{padding:20px 18px;font-size:14.5px;overflow-wrap:break-word;}
+
+    /* Keuze-sectie en FAQ */
+    .choice-grid{grid-template-columns:1fr;gap:16px;}
+    .choice-card{padding:22px 20px;}
+    .choice-note{font-size:15.5px;}
+    details{padding:4px 16px;}
+    details summary{font-size:15.5px;padding:12px 0;padding-right:26px;position:relative;}
+    details summary::after{position:absolute;right:0;top:12px;float:none;}
+
+    /* Band en footer */
+    .band p{font-size:16.5px;}
+    footer{padding:34px 18px;}
+    footer .wrap{gap:20px;grid-template-columns:1fr;}
+  }
+
+  /* ---------- Zeer kleine schermen ---------- */
+  @media (max-width:380px){
+    .brand small{display:none;}
+    .brand{font-size:11.5px;}
+    nav ul{gap:14px;}
+    .hero h1{font-size:26px;}
+  }
+  /* ---------- Zwevende actieknop op mobiel ---------- */
+  .fab{
+    display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:80;
+    background:var(--green);color:#fff;text-decoration:none;text-align:center;
+    font-family:'Poppins';font-weight:700;font-size:15.5px;
+    padding:15px 18px;border-radius:40px;
+    box-shadow:0 8px 24px rgba(32,52,45,.28);
+    opacity:0;transform:translateY(80px);transition:opacity .25s,transform .25s;
+  }
+  .fab.show{opacity:1;transform:translateY(0);}
+  @media (max-width:720px){
+    .fab{display:block;}
+    .toast{bottom:76px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="logo">R</span>
+      <span>NIEUWE MIDDELBARE SCHOOL RANST<small>STEUN HET PROJECT · KROMSTRAAT</small></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#waarom">Waarom</a></li>
+        <li><a href="#voordelen">Voordelen</a></li>
+        <li><a href="#keuze">School of woningen?</a></li>
+        <li><a href="#actie">In 5 minuten</a></li>
+        <li><a href="#tekst">Voorbeeldtekst</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#actie">Steun nu →</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-in">
+      <span class="kicker">Steun als voorstander · positieve melding</span>
+      <h1>Geef onze jongeren een school <span>dicht bij huis</span></h1>
+      <p class="lead">
+        In en rond Ranst is er een groot tekort aan plaatsen in het secundair onderwijs.
+        De nieuwe middelbare school in de Kromstraat lost dat op. Sta jij achter dit project?
+        Laat je stem tellen — het duurt <strong>maar 5 minuten</strong>.
+      </p>
+      <div class="hero-cta">
+        <a class="btn big" href="#actie">Maak een positieve melding</a>
+        <a class="btn big gold" href="#waarom">Ontdek waarom</a>
+      </div>
+      <div class="deadline">⏳ Laat je steun horen vóór <strong>19 september 2026</strong> — wacht niet!</div>
+    </div>
+  </section>
+
+  <section id="waarom">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Waarom deze school er moet komen</h2>
+        <p>
+          De plannen bestaan al sinds 2023. Er is een aantoonbaar capaciteitstekort in de streek —
+          zelfs de Vlaamse overheid erkent dit en voorziet subsidies voor de bouw.
+          Toch dreigt een kleine groep tegenstanders het project tegen te houden.
+          Daarom is het belangrijk dat de <strong>stille meerderheid van voorstanders</strong> nu ook gehoord wordt.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="ic">🎒</span><h3>Nu al te weinig plaatsen</h3><p>Veel jongeren uit Ranst en omgeving raken niet in de school van hun eerste keuze en belanden op wachtlijsten. Een extra school in de streek is gewoon nodig.</p></div>
+        <div class="card"><span class="ic">🚲</span><h3>Niet meer onnodig ver fietsen</h3><p>Vandaag rijden en fietsen kinderen elke dag kilometers naar Antwerpen, Lier of verder. Een school dichtbij betekent kortere, veiligere schoolritten.</p></div>
+        <div class="card"><span class="ic">💡</span><h3>Vernieuwend onderwijs</h3><p>De LAB-methode (Scandinavisch geïnspireerd) combineert dezelfde leerdoelen met een persoonlijk leertraject, projectwerk en echte vaardigheden voor de toekomst.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="voordelen" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Goed voor onze buurt en onze toekomst</h2>
+        <p>Een school is veel meer dan een gebouw. Ze is een motor voor de hele gemeenschap.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><span class="ic">🛡️</span><h3>Veiliger verkeer, minder autoritten</h3><p>Wie in de buurt naar school kan met de fiets of te voet, hoeft niet meer met de auto naar een verre school gebracht te worden. Dat betekent minder ochtendspits op de grote wegen. De school voorziet bovendien een ruime fietsenstalling en wordt afgestemd met het Agentschap Wegen en Verkeer.</p></div>
+        <div class="card"><span class="ic">🌳</span><h3>Een verzorgd, groen ontwerp</h3><p>Het ontwerp voorziet een buitenspeelplaats, groenaanleg en aandacht voor waterhuishouding. Een goed onderhouden schoolsite oogt beter dan een braakliggend, verwaarloosd perceel.</p></div>
+        <div class="card"><span class="ic">🧠</span><h3>Lokale kennis opbouwen</h3><p>Een eigen middelbare school houdt talent, kennis en jonge gezinnen in de gemeente. Ranst bouwt zo aan zijn eigen intellectueel en sociaal kapitaal in plaats van het te exporteren naar buurgemeenten.</p></div>
+        <div class="card"><span class="ic">👩‍🏫</span><h3>Lokale werkgelegenheid</h3><p>Een school biedt op termijn werk aan leerkrachten en ondersteunend personeel, waarvan een deel uit de eigen streek kan komen. Zo blijft er ook professioneel talent in Ranst. Het personeel verplaatst zich bovendien buiten de klassieke spitsuren en verspreid over de dag — het zorgt dus niet voor extra piekverkeer.</p></div>
+        <div class="card"><span class="ic">🤝</span><h3>Een plek voor de gemeenschap</h3><p>Schoolinfrastructuur zoals de sportzaal en lokalen kan buiten de lesuren ook de lokale verenigingen en buurt ten goede komen.</p></div>
+        <div class="card"><span class="ic">🌍</span><h3>Toekomstbestendig</h3><p>Onze jongeren verdienen onderwijs dat hen voorbereidt op een snel veranderende wereld: kritisch denken, samenwerken, initiatief nemen en zelfstandig leren.</p></div>
+        <div class="card"><span class="ic">📊</span><h3>Beperkte verkeersoverlast — bewezen</h3><p>In Wommelgem is bij drie lagere scholen in de buurt aangetoond dat de verkeersoverlast van een school bijzonder beperkt blijft. De vrees voor blijvende verkeerschaos strookt niet met de praktijk elders in de regio. Bij een <strong>middelbare</strong> school is de impact zelfs nóg kleiner: tieners willen op die leeftijd niet meer met de auto worden afgezet en komen veel vaker zelfstandig met de fiets, te voet of met het openbaar vervoer.</p></div>
+        <div class="card"><span class="ic">⏱️</span><h3>Slechts twee korte piekmomenten</h3><p>Leerlingen komen en vertrekken vrijwel gelijktijdig: 's morgens en in de namiddag, telkens binnen een tijdspanne van zo'n 30 minuten. Eventuele drukte blijft dus gegarandeerd beperkt tot twee korte momenten per dag — de rest van de dag is het rustig.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="keuze" class="choice">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Een school… of 65 nieuwe gezinnen als buren?</h2>
+        <p>Denk even goed na wat er met dit perceel gebeurt als de school er níét komt. Op amper 1,5 km verderop bouwde een projectontwikkelaar al woningen. Wat verkies jij als nieuwe buur?</p>
+      </div>
+      <div class="choice-grid">
+        <div class="choice-card good">
+          <h3>🏫 Een school</h3>
+          <ul>
+            <li>Kinderen zitten overdag in de klas.</li>
+            <li>Slechts 2 tot 3 keer per dag even naar buiten.</li>
+            <li>Activiteit uitsluitend tussen ± 8u en 16u, op weekdagen.</li>
+            <li>'s Avonds, 's nachts en in het weekend: rust.</li>
+            <li>Groene site met speelplaats in plaats van bebouwing.</li>
+          </ul>
+        </div>
+        <div class="choice-card bad">
+          <h3>🏢 65 nieuwe gezinnen</h3>
+          <ul>
+            <li>Appartementen of woningen zoals 1,5 km verderop.</li>
+            <li>Bewoners leven er 24 uur op 24, 7 dagen op 7.</li>
+            <li>Verkeer, parkeerdruk en activiteit dag én nacht.</li>
+            <li>Ook in het weekend en tijdens vakanties permanent bewoond.</li>
+            <li>Meer verharding en een definitief volgebouwd perceel.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="choice-note">De keuze is duidelijk: een school zorgt voor beperkte, voorspelbare drukte op enkele momenten per dag — nieuwe woningen betekenen permanente bewoning, dag en nacht.</p>
+    </div>
+  </section>
+
+
+
+  <section id="actie">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>In 5 minuten een positieve melding maken</h2>
+        <p><strong>Belangrijk:</strong> dien géén bezwaarschrift in — ook geen positief. Het gemeentebestuur van Ranst leest weliswaar élk bezwaarschrift plichtsbewust en grondig na, maar bij een eventueel <em>beroep</em> tegen de vergunning telt de provinciale ambtenaar enkel nog het <em>aantal</em> ingediende bezwaren — zonder onderscheid tussen vóór of tegen. Een positief bedoeld bezwaar wordt dan meegeteld als tegenstem en werkt zo averechts. Laat je steun daarom horen via een <strong>positieve melding</strong> aan de gemeente. Zo doe je het:</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>Open het gemeentelijk e-loket van Ranst</h3>
+            <p>Ga naar het meldingsformulier van de gemeente Ranst:<br>
+            <a href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">eloket.ranst.be → Melding of vraag aan Gemeente Ranst</a></p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Kies de juiste categorie</h3>
+            <p>Selecteer bij “Selecteer een categorie” de optie <em>“(Ver)bouwen-verkavelen”</em>. Aanmelden met itsme of eID is niet nodig.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Plak de voorbeeldtekst</h3>
+            <p>Kopieer de tekst hieronder en plak die in het veld <em>“Beschrijf je vraag of probleem”</em>. Pas gerust aan met je eigen woorden — persoonlijke verhalen tellen extra mee!</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Klik op “Volgende”</h3>
+            <p>Eventueel kan je nog een foto toevoegen (niet verplicht). Klik daarna op <strong>Volgende</strong> om naar de volgende stap te gaan.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Vul je gegevens in en verstuur</h3>
+            <p>Vul je contactgegevens in en verstuur de melding. Klaar — bedankt voor je steun! 💚</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:34px;">
+        <a class="btn big" href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Open het e-loket van Ranst →</a>
+      </p>
+    </div>
+  </section>
+
+
+  <section id="tekst" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Voorbeeldtekst om te kopiëren</h2>
+        <p>Plak dit in het veld “Beschrijf je vraag of probleem” op het e-loket. De eerste regel maakt meteen duidelijk dat het om een <strong>positieve melding</strong> gaat.</p>
+      </div>
+      <div class="copybox">
+        <div class="bar">
+          <strong>📋 Positieve melding</strong>
+          <button id="copyBtn" type="button">Kopieer tekst</button>
+        </div>
+        <div id="bezwaartekst"><span class="first">Dit is een positieve melding als voorstander van dit project.</span>
+
+Als inwoner van Ranst en omgeving steun ik met overtuiging het project voor de bouw van de nieuwe middelbare school in de Kromstraat. Ik vraag het gemeentebestuur uitdrukkelijk om een positieve beslissing te nemen en de omgevingsvergunning te verlenen.
+
+Ik onderschrijf dit project om de volgende redenen:
+
+1. Er is een reëel en erkend capaciteitstekort in het secundair onderwijs in onze regio. Ook de Vlaamse overheid bevestigt deze nood en voorziet daarom subsidies voor de bouw. Extra schoolplaatsen zijn dringend nodig.
+
+2. Vandaag moeten veel jongeren uit Ranst en de omliggende gemeenten zich elke dag ver verplaatsen naar een middelbare school. Een school dichtbij zorgt voor kortere en veiligere verplaatsingen, en maakt het mogelijk om met de fiets of te voet naar school te gaan in plaats van met de auto. Dat komt de verkeersveiligheid en de luchtkwaliteit ten goede.
+
+3. De school bouwt mee aan de toekomst van onze gemeente: ze houdt jonge gezinnen, kennis en talent in de streek, creëert lokale tewerkstelling en versterkt het sociale en verenigingsleven in de buurt.
+
+4. Het pedagogische project is toekomstgericht en van hoge kwaliteit. Leerlingen krijgen dezelfde leerdoelen aangeboden, maar via een persoonlijk leertraject, projectwerk en aandacht voor vaardigheden die belangrijk zijn in een snel veranderende samenleving.
+
+5. Een goed ontworpen en onderhouden schoolsite, met fietsenstalling, groenaanleg en een doordachte mobiliteits- en waterhuishoudingsaanpak, is een meerwaarde voor de buurt in vergelijking met een braakliggend perceel.
+
+6. De vrees voor blijvende verkeersoverlast is ongegrond. In Wommelgem is bij drie lagere scholen in de buurt gebleken dat de verkeersimpact van een school bijzonder beperkt blijft. Bovendien komen en vertrekken leerlingen vrijwel gelijktijdig, telkens binnen een tijdspanne van ongeveer 30 minuten 's morgens en in de namiddag. Eventuele drukte blijft dus beperkt tot twee korte piekmomenten per dag, en enkel op schooldagen.
+
+7. Tot slot vraag ik om ook stil te staan bij het alternatief voor deze site. Indien de school er niet komt, is de kans reëel dat dit perceel wordt volgebouwd met woningen of appartementen, zoals op ongeveer 1,5 km afstand reeds door een projectontwikkelaar is gebeurd. Een school brengt activiteit op enkele momenten per dag, uitsluitend overdag en op weekdagen, terwijl tientallen nieuwe gezinnen 24 uur op 24 en 7 dagen op 7 voor verkeer en bewoning zorgen. Een school is voor de buurt dan ook een gunstiger invulling van deze site.
+
+Ik heb er vertrouwen in dat de initiatiefnemers en de bevoegde diensten (waaronder het Agentschap Wegen en Verkeer) de aandachtspunten rond mobiliteit, verkeersveiligheid en waterhuishouding zorgvuldig zullen aanpakken. Deze aandachtspunten zijn oplosbaar en mogen dit maatschappelijk noodzakelijke project niet in de weg staan.
+
+Om al deze redenen vraag ik met aandrang om een gunstige beslissing en de verlening van de omgevingsvergunning.
+
+Met vriendelijke groet,
+[Je naam en woonplaats]</div>
+      </div>
+      <p class="note">Tip: personaliseer de tekst met je eigen situatie (bv. “mijn kinderen fietsen nu dagelijks 12 km naar school”). Eigen, oprechte verhalen maken meer indruk dan een identieke standaardtekst.</p>
+    </div>
+  </section>
+
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Veelgestelde vragen</h2>
+      </div>
+      <details open>
+        <summary>Waarom een “melding” en geen bezwaarschrift?</summary>
+        <p>Het gemeentebestuur van Ranst leest élk bezwaarschrift plichtsbewust en grondig na — inhoudelijk maakt een positieve boodschap daar dus wél verschil. Het probleem ontstaat bij een eventueel <strong>beroep</strong> tegen de vergunning: dan kijkt de provinciale ambtenaar vooral naar het <strong>aantal</strong> ingediende bezwaren, zonder te wegen of ze vóór of tegen zijn. Een positief bedoeld bezwaar telt dan mee als tegenstem en werkt averechts. Daarom laat je je steun beter horen via een <strong>positieve melding</strong> aan de gemeente.</p>
+      </details>
+      <details>
+        <summary>Moet ik in Ranst wonen om een melding te doen?</summary>
+        <p>Nee. Iedereen die het project een warm hart toedraagt, kan een positieve melding maken. Je hoeft niet per se in de onmiddellijke buurt te wonen.</p>
+      </details>
+      <details>
+        <summary>Moet ik me aanmelden met itsme of eID?</summary>
+        <p>Nee. Het meldingsformulier van de gemeente Ranst vraagt geen aanmelding. Je vult gewoon het formulier in en geeft je contactgegevens door.</p>
+      </details>
+      <details>
+        <summary>Welke categorie kies ik?</summary>
+        <p>Kies bij “Selecteer een categorie” de optie <strong>“(Ver)bouwen-verkavelen”</strong>. Plak daarna de voorbeeldtekst in het veld “Beschrijf je vraag of probleem”.</p>
+      </details>
+      <details>
+        <summary>Wat als iedereen dezelfde tekst indient?</summary>
+        <p>Elke stem telt, maar unieke, persoonlijke meldingen wegen extra door. Voeg gerust een eigen zin of ervaring toe aan de voorbeeldtekst.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Samen geven we onze jongeren een toekomst dichtbij</h2>
+      <p>Het duurt maar 5 minuten. Open het e-loket, kies “(Ver)bouwen-verkavelen” en plak de tekst.</p>
+      <a class="btn big gold" href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Maak nu je positieve melding →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Nieuwe middelbare school Ranst</h4>
+      <p>Een burgerinitiatief ter ondersteuning van het project in de Kromstraat, Ranst. Gedreven secundair onderwijs, dicht bij huis.</p>
+    </div>
+    <div>
+      <h4>Handige links</h4>
+      <p>
+        <a href="https://www.nieuwemiddelbareschoolranst.be" target="_blank" rel="noopener">Officiële website van het project</a><br>
+        <a href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Positieve melding maken (e-loket Ranst)</a>
+      </p>
+    </div>
+    <div>
+      <h4>Deel deze pagina</h4>
+      <p>Help mee: stuur deze pagina door naar buren, ouders en sympathisanten die het project een warm hart toedragen.</p>
+    </div>
+  </div>
+  <div class="disc">
+    Deze pagina is een onafhankelijk steuninitiatief en geen officiële overheidscommunicatie. Een positieve melding maak je via het gemeentelijk e-loket van Ranst.
+    Nieuwe middelbare school in de Kromstraat, Ranst — laat je steun als voorstander horen vóór 19 september 2026.
+  </div>
+</footer>
+
+<div class="toast" id="toast">Tekst gekopieerd naar het klembord ✔</div>
+<a class="fab" id="fab" href="#actie">Steun in 5 minuten →</a>
+
+<script>
+  const btn = document.getElementById('copyBtn');
+  const toast = document.getElementById('toast');
+  const txtEl = document.getElementById('bezwaartekst');
+  btn.addEventListener('click', async () => {
+    const text = txtEl.innerText;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      const r = document.createRange();
+      r.selectNodeContents(txtEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges(); sel.addRange(r);
+      document.execCommand('copy'); sel.removeAllRanges();
+    }
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+  });
+
+  /* Zwevende actieknop op mobiel: verschijnt na scrollen, verbergt bij de actie-sectie */
+  const fab = document.getElementById('fab');
+  const actie = document.getElementById('actie');
+  function updateFab(){
+    const gescrold = window.scrollY > 320;
+    let bijActie = false;
+    if (actie){
+      const r = actie.getBoundingClientRect();
+      bijActie = r.top < window.innerHeight && r.bottom > 0;
+    }
+    fab.classList.toggle('show', gescrold && !bijActie);
+  }
+  window.addEventListener('scroll', updateFab, {passive:true});
+  window.addEventListener('resize', updateFab);
+  updateFab();
+</script>
+
+</body>
+</html>
+
