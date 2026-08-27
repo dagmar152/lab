@@ -1,6 +1,6 @@
 # Git-commando's
 
-> ⚠️ **Belangrijk — het bestand `CNAME` nooit verwijderen.**
+> ⚠️ **Belangrijk: het bestand `CNAME` nooit verwijderen.**
 > Daarin staat `www.ranstverdientschool.be`. Zonder dat bestand valt de site terug
 > op `ranstverdientschool.github.io` en is het eigen domein weg.
 > Neem `CNAME` daarom mee in elke commit-reeks en doe **altijd eerst `git pull`**
