@@ -114,29 +114,52 @@
   .d4 .cta .t strong{display:block;font-family:'Poppins',sans-serif;font-size:9.6pt;color:#fff;margin-bottom:1mm;}
   .d4 .cta .url{display:block;font-size:8.4pt;color:#fff;margin-top:1.2mm;}
 
-  /* ===== ONTWERP 5 · Minimaal, QR centraal ===== */
-  .d5{padding:5.5mm 9mm 0;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;}
+  /* ===== VOORKANT · Steun nu, QR centraal ===== */
+  .d5{padding:5mm 8.5mm 0;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;}
   .d5 .logo{width:13mm;height:13mm;border-radius:50%;background:var(--green);color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:16pt;display:grid;place-items:center;}
-  .d5 .fivemin{background:var(--green);color:#fff;border-radius:3mm;padding:3.2mm 6mm 3.6mm;text-align:center;}
-  .d5 .fivemin .big{font-family:'Poppins',sans-serif;font-weight:800;font-size:30pt;line-height:.9;letter-spacing:-1.5px;}
-  .d5 .fivemin .big small{font-size:11pt;font-weight:700;letter-spacing:0;}
-  .d5 .fivemin .sub{font-family:'Poppins',sans-serif;font-weight:600;font-size:7.4pt;line-height:1.3;color:#eaf6f0;margin-top:1.6mm;}
-  .d5 h1{font-size:16.5pt;line-height:1.16;margin:4mm 0 3mm;}
+  /* 5-minutenband: compacte rij, zodat er ruimte blijft voor de tekstblokken */
+  .d5 .fivemin{align-self:stretch;background:var(--green);color:#fff;border-radius:2.6mm;padding:2.4mm 4mm;display:flex;align-items:center;justify-content:center;gap:3.2mm;text-align:left;}
+  .d5 .fivemin .big{font-family:'Poppins',sans-serif;font-weight:800;font-size:20pt;line-height:1;letter-spacing:-1px;flex:none;}
+  .d5 .fivemin .big small{font-size:9pt;font-weight:700;letter-spacing:0;}
+  .d5 .fivemin .sub{font-family:'Poppins',sans-serif;font-weight:600;font-size:7.2pt;line-height:1.28;color:#eaf6f0;}
+  .d5 h1{font-size:15pt;line-height:1.14;margin:3.4mm 0 2.4mm;}
   .d5 h1 em{font-style:normal;color:var(--green-dark);}
-  .d5 .lead{font-size:8.3pt;line-height:1.55;color:var(--muted);margin:0 0 5mm;}
-  .d5 .qrwrap{border:.6mm solid var(--green);border-radius:4mm;padding:3.5mm;background:#fff;}
-  .d5 .scanlbl{font-family:'Poppins',sans-serif;font-weight:700;font-size:8.6pt;color:var(--green-dark);margin:3mm 0 1mm;}
-  .d5 .url{font-size:9.2pt;color:var(--ink);}
-  .d5 .pill{margin-top:3.5mm;background:#fff3e6;border:1px solid #f6d3ab;color:var(--warn);font-family:'Poppins',sans-serif;font-weight:700;font-size:7.1pt;padding:1.8mm 3.6mm;border-radius:20px;}
-  .d5 .foot{margin:auto -9mm 0;background:var(--sand);color:var(--muted);font-size:6.3pt;line-height:1.5;padding:2.8mm 9mm 4mm;}
+  .d5 .lead{font-size:8pt;line-height:1.5;color:var(--muted);margin:0 0 2.6mm;}
+  .d5 .lead b{color:var(--ink);}
+  /* Kadertje met het argument van de stille meerderheid */
+  .d5 .why{align-self:stretch;background:var(--cream);border:1px solid var(--line);border-left:1.1mm solid var(--green);border-radius:2.4mm;padding:2.2mm 3mm;font-size:7.3pt;line-height:1.42;color:#3d4842;text-align:left;margin:0 0 3mm;}
+  .d5 .why b{color:var(--green-dark);}
+  .d5 .qrwrap{border:.6mm solid var(--green);border-radius:3.4mm;padding:2.5mm;background:#fff;}
+  .d5 .qrwrap .qr{width:24mm;height:24mm;}
+  .d5 .url{font-size:8.8pt;color:var(--ink);margin-top:2mm;}
+  .d5 .pill{margin-top:2.4mm;background:#fff3e6;border:1px solid #f6d3ab;color:var(--warn);font-family:'Poppins',sans-serif;font-weight:700;font-size:7.1pt;padding:1.6mm 3.4mm;border-radius:20px;}
+  .d5 .foot{margin:auto -8.5mm 0;background:var(--sand);color:var(--muted);font-size:6pt;line-height:1.42;padding:2.4mm 8.5mm 3.4mm;text-align:left;}
+  .d5 .foot .disc{display:block;margin-top:1.2mm;font-size:5.6pt;color:#7d8884;}
 
-  /* ===== Print: elk ontwerp op een eigen A6-pagina ===== */
-  @page{size:105mm 148mm;margin:0;}
+  /* ===== Snijformaat tonen op het scherm ===== */
+  .sheet.bleed::after{
+    content:"";position:absolute;inset:3mm;border:.2mm dashed #c8c8c8;pointer-events:none;
+  }
+
+  /* ===== Print: 1 flyer per pagina, A6 + 3 mm afloop = 111 x 154 mm =====
+     Pagina 1 = voorkant, pagina 2 = achterkant. De achtergrondkleuren lopen
+     3 mm buiten het snijformaat door, zodat er na het snijden geen witte
+     randjes ontstaan. Geen snijtekens: de drukker leest het formaat uit de PDF. */
+  @page{size:111mm 154mm;margin:0;}
   @media print{
     body{background:#fff;}
     .toolbar,.label{display:none !important;}
-    .sheet{margin:0;box-shadow:none;page-break-after:always;break-after:page;}
+    .sheet{width:100%;height:100vh;margin:0;box-shadow:none;page-break-after:always;break-after:page;}
     .sheet:last-of-type{page-break-after:auto;break-after:auto;}
+    .sheet.bleed::after{display:none;}
+    /* Binnenmarges +3 mm: de tekst blijft op dezelfde plek binnen het snijformaat */
+    .d5{padding:8mm 11.5mm 0;}
+    .d5 .foot{margin:auto -11.5mm 0;padding:2.4mm 11.5mm 6.4mm;}
+    .back .hd{padding:9mm 11mm 5mm;}
+    .back .col{padding:4.4mm 4.6mm;}
+    .back .col.good{padding-left:7.6mm;}
+    .back .col.bad{padding-right:7.6mm;}
+    .back .note{padding:3.4mm 11mm 7mm;}
     *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   }
 
@@ -163,14 +186,16 @@
 <body>
 
 <div class="toolbar">
-  <strong>Flyer A6 dubbelzijdig · voorkant + achterkant</strong>
+  <strong>Flyer A6 dubbelzijdig · 1 flyer per pagina, met afloop</strong>
   <button onclick="window.print()">Afdrukken / PDF maken</button>
   <div style="margin-top:6px">
-    Pagina 1 = voorkant, pagina 2 = achterkant. Zet in het printvenster <code>Marges: geen</code>,
+    De PDF bevat 2 pagina's van <code>111 x 154 mm</code> (A6 105 x 148 mm + 3 mm afloop rondom):
+    pagina 1 = de voorkant, pagina 2 = de achterkant. Eén afbeelding per pagina, de drukker doet de rest.
+    Zet in het printvenster <code>Papier: 111 x 154 mm</code>, <code>Marges: geen</code>,
     <code>Schaal: 100 %</code> en vink <code>Achtergrondafbeeldingen</code> aan.
+    De stippellijn in de preview toont waar de drukker snijdt.
   </div>
 </div>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="qrsym" viewBox="0 0 37 37">
     <rect width="37" height="37" fill="#fff"/>
@@ -179,26 +204,26 @@
 </svg>
 
 <!-- ================= VOORKANT ================= -->
-<div class="label">Voorkant <span>Ontwerp 5 — minimaal, QR centraal.</span></div>
-<div class="sheet d5">
+<div class="label">Voorkant <span>Steun nu · QR centraal. De stippellijn is het snijformaat (105 x 148 mm).</span></div>
+<div class="sheet d5 bleed">
   <div class="fivemin">
     <div class="big">5<small> min.</small></div>
     <div class="sub">Zoveel tijd kost het<br>om de school te steunen.</div>
   </div>
-  <h1>Steun jij een middelbare school <em>in Ranst</em>?</h1>
-  <p class="lead">Er zijn te weinig plaatsen in het secundair onderwijs in onze streek. De nieuwe school in de Kromstraat lost dat op, maar heeft jouw stem nodig. Eén melding aan de gemeente, 5 minuten werk.</p>
+  <h1>Steun NU de nieuwe middelbare school <em>in Ranst</em></h1>
+  <p class="lead">Er zijn te weinig plaatsen in het secundair onderwijs in onze streek. De nieuwe school in de Kromstraat lost dat op, maar heeft <b>jouw steun</b> nodig.</p>
+  <div class="why">Wie tegen is, laat zich luid horen. Wie voor is, zwijgt meestal. Zo lijkt het alsof de hele buurt tegen is. <b>Eén korte positieve melding aan de gemeente maakt het verschil.</b></div>
   <div class="qrwrap">
     <svg class="qr lg" viewBox="0 0 37 37"><use href="#qrsym"/></svg>
   </div>
-  <div class="scanlbl">Scan met je smartphone</div>
   <div class="url">www.ranstverdientschool.be</div>
   <div class="pill">⏳ Vóór 19 september 2026</div>
-  <div class="foot">Waarom deze school? Wat met water, verkeer en groen? En wat komt er als de school er níét komt? Je leest het allemaal op de website.<br>Onafhankelijk burgerinitiatief · geen officiële overheidscommunicatie</div>
+  <div class="foot">Over de nieuwe middelbare school in de Kromstraat circuleert veel. Wij vroegen ons af: wat staat er nu echt in het dossier? We zochten het uit en zetten alles op één website: de cijfers over water en verharding, het verkeer, het groen achteraan en het aantal leerlingen.<span class="disc">Onafhankelijk burgerinitiatief · geen officiële overheidscommunicatie</span></div>
 </div>
 
 <!-- ================= ACHTERKANT · KIES JE TOEKOMSTIGE BUUR! ================= -->
-<div class="label">Achterkant <span>De vergelijking uit ontwerp 4, met de titel “Kies je toekomstige buur!”.</span></div>
-<div class="sheet back">
+<div class="label">Achterkant <span>De vergelijking “Kies je toekomstige buur!”. De stippellijn is het snijformaat.</span></div>
+<div class="sheet back bleed">
   <div class="hd">
     <h1>Kies je toekomstige buur!</h1>
     <p>Deze grond in de Kromstraat is bouwgrond in woongebied en wordt verkocht. Er komt dus iets. Wat verkies jij?</p>
