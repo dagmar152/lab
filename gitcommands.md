@@ -37,3 +37,4 @@ git reset --soft HEAD~1       # laatste commit terug, wijziging behouden
 git restore index.html        # wijziging weg (nog niet gecommit)
 git reset --soft HEAD~1       # laatste commit terug, wijziging behouden
 ```
+
