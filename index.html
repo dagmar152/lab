@@ -258,6 +258,10 @@
     .toast{bottom:76px;}
   }
 </style>
+
+<!-- GoatCounter: privacyvriendelijke bezoekersstatistieken (geen cookies) -->
+<script data-goatcounter="https://ranstverdientschool.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -276,7 +280,7 @@
         <li><a href="#tekst">Voorbeeldtekst</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart</a></li>
+        <li><a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download data-goatcounter-click="download-infokaart" data-goatcounter-title="Infokaart (menu)">Infokaart</a></li>
       </ul>
     </nav>
     <a class="btn" href="#actie">Steun nu →</a>
@@ -608,7 +612,7 @@ Met vriendelijke groet,
       <p>Het duurt maar 5 minuten. Open het e-loket, kies “(Ver)bouwen-verkavelen” en plak de tekst.</p>
       <div class="band-cta">
         <a class="btn big gold" href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Maak nu je positieve melding →</a>
-        <a class="btn big ghost" href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart downloaden en mee verspreiden</a>
+        <a class="btn big ghost" href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download data-goatcounter-click="download-infokaart" data-goatcounter-title="Infokaart (actieblok)">Infokaart downloaden en mee verspreiden</a>
       </div>
       <p class="band-note">Help mee bekendmaken: verspreid de infokaart door hem af te geven of door te sturen aan buren, ouders of vrienden.</p>
     </div>
@@ -632,7 +636,7 @@ Met vriendelijke groet,
     <div>
       <h4>Deel deze pagina</h4>
       <p>Help mee: stuur deze pagina of de infokaart door naar buren, ouders en sympathisanten die het project een warm hart toedragen.<br>
-      <a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart downloaden en mee verspreiden</a></p>
+      <a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download data-goatcounter-click="download-infokaart" data-goatcounter-title="Infokaart (footer)">Infokaart downloaden en mee verspreiden</a></p>
     </div>
   </div>
   <div class="disc">
@@ -658,6 +662,10 @@ Met vriendelijke groet,
       const sel = window.getSelection();
       sel.removeAllRanges(); sel.addRange(r);
       document.execCommand('copy'); sel.removeAllRanges();
+    }
+    /* Tel deze klik in GoatCounter als event 'copy-tekst' */
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: 'copy-tekst', title: 'Kopieer tekst geklikt', event: true });
     }
     toast.textContent = 'Tekst gekopieerd naar het klembord ✔';
     toast.classList.add('show');
