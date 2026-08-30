@@ -88,16 +88,25 @@
   #bezwaartekst .first{font-weight:700;color:var(--green-dark);}
   .note{max-width:840px;margin:16px auto 0;color:var(--muted);font-size:14px;text-align:center;}
 
-  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 20px;margin:0 auto 14px;max-width:840px;}
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 20px;margin:0 auto 14px;max-width:840px;scroll-margin-top:96px;}
   details summary{cursor:pointer;font-weight:700;font-family:'Poppins';padding:14px 0;list-style:none;}
   details summary::-webkit-details-marker{display:none;}
   details summary::after{content:"+";float:right;color:var(--green);font-size:22px;line-height:1;}
   details[open] summary::after{content:"–";}
   details p{color:var(--muted);margin:0 0 16px;font-size:15px;}
+  details.spot{border-color:var(--green);box-shadow:0 0 0 3px rgba(58,161,126,.18);}
+
+  /* Verwijzing van een kaart naar het bijbehorende FAQ-item */
+  .faqlink{display:inline-block;margin-top:10px;font-family:'Poppins';font-weight:700;font-size:14px;color:var(--green-dark);text-decoration:none;border-bottom:2px solid rgba(58,161,126,.35);}
+  .faqlink:hover{border-bottom-color:var(--green);}
 
   .band{background:var(--green);color:#fff;text-align:center;}
   .band h2{color:#fff;font-size:clamp(26px,4vw,38px);margin:0 0 14px;}
   .band p{color:#e7f4ee;font-size:18px;max-width:640px;margin:0 auto 28px;}
+  .band-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .band-note{font-size:15px !important;color:#d8ede3 !important;margin:22px auto 0 !important;}
+  .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.7);}
+  .btn.ghost:hover{background:#fff;color:var(--green-dark);}
 
   .choice{background:linear-gradient(135deg,#eaf5f0 0%,#f7f4ec 100%);}
   .choice-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:900px;margin:0 auto;}
@@ -220,6 +229,9 @@
 
     /* Band en footer */
     .band p{font-size:16.5px;}
+    .band-cta{flex-direction:column;gap:10px;}
+    .band-cta .btn{width:100%;}
+    .faqlink{font-size:13.5px;}
     footer{padding:34px 18px;}
     footer .wrap{gap:20px;grid-template-columns:1fr;}
   }
@@ -264,6 +276,7 @@
         <li><a href="#tekst">Voorbeeldtekst</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart</a></li>
       </ul>
     </nav>
     <a class="btn" href="#actie">Steun nu →</a>
@@ -315,17 +328,17 @@
         <p>Een school is veel meer dan een gebouw. Ze is een motor voor de hele gemeenschap.</p>
       </div>
       <div class="grid">
-        <div class="card"><span class="ic">🛡️</span><h3>Veiliger verkeer, minder autoritten</h3><p>Wie in de buurt naar school kan met de fiets of te voet, hoeft niet meer met de auto naar een verre school gebracht te worden. Dat betekent minder ochtendspits op de grote wegen. De school voorziet bovendien een ruime fietsenstalling en wordt afgestemd met het Agentschap Wegen en Verkeer.</p></div>
+        <div class="card"><span class="ic">🛡️</span><h3>Veiliger verkeer, minder autoritten</h3><p>Wie in de buurt naar school kan met de fiets of te voet, hoeft niet meer met de auto naar een verre school gebracht te worden. Dat betekent minder ochtendspits op de grote wegen. De school voorziet bovendien een ruime fietsenstalling en wordt afgestemd met het Agentschap Wegen en Verkeer.</p><a class="faqlink" href="#faq-verkeer">Veilig aan een verbindingsweg? → FAQ</a></div>
         <div class="card"><span class="ic">🌳</span><h3>Een verzorgd, groen ontwerp</h3><p>Het ontwerp voorziet een buitenspeelplaats, groenaanleg en aandacht voor waterhuishouding. Een goed onderhouden schoolsite oogt beter dan een braakliggend, verwaarloosd perceel.</p></div>
         <div class="card"><span class="ic">🧠</span><h3>Lokale kennis opbouwen</h3><p>Een eigen middelbare school houdt talent, kennis en jonge gezinnen in de gemeente. Ranst bouwt zo aan zijn eigen intellectueel en sociaal kapitaal in plaats van het te exporteren naar buurgemeenten.</p></div>
         <div class="card"><span class="ic">👩‍🏫</span><h3>Lokale werkgelegenheid</h3><p>Een school biedt op termijn werk aan leerkrachten en ondersteunend personeel, waarvan een deel uit de eigen streek kan komen. Zo blijft er ook professioneel talent in Ranst. Het personeel verplaatst zich bovendien buiten de klassieke spitsuren en verspreid over de dag: geen extra piekverkeer dus.</p></div>
         <div class="card"><span class="ic">🎓</span><h3>Meer kans voor onze eigen jongeren</h3><p>De wet verbiedt scholen om voorrang te geven op basis van woonafstand. Maar deze school komt in het <strong>inschrijvingssysteem van Ranst</strong> terecht, als enige middelbare school in de gemeente. Wie hier inschrijft, doet dat dus bewust en gericht, en kan de school niet als reserve gebruiken naast een inschrijving in Antwerpen. Daarnaast komt er een samenwerking met de basisscholen van Ranst en Wommelgem. Het resultaat: de vraag is heel gericht, en elders in de regio komen plaatsen vrij. Zo verbeteren de keuzemogelijkheden voor álle jongeren uit de streek.</p></div>
-        <div class="card"><span class="ic">💧</span><h3>Water: de cijfers uit het dossier</h3><p>De aanvraag in het Omgevingsloket gaat over drie percelen van samen <strong>51.710 m²</strong>. Daarvan wordt <strong>2.658 m²</strong> waterondoorlatend verhard en <strong>954 m²</strong> in waterdoorlatende verharding aangelegd. Dat is ongeveer <strong>5 % ondoorlatende verharding</strong>, of 7 % als je alle verharding samen neemt. Het overgrote deel van het terrein blijft dus onverhard. Bovendien staat het project onder <strong>verhoogd toezicht van de dienst Integraal Waterbeleid</strong>: die rekent het volledige waterverhaal na volgens zeer strenge normen en zonder positief advies komt er geen vergunning. Het regenwater wordt <strong>gebufferd op eigen terrein</strong> en vertraagd afgevoerd. De beek op het terrein verdwijnt niet: ze wordt naar achteren verlegd en <strong>sterk verbreed</strong>, zodat er méér ruimte komt voor water om natuurlijk in te sijpelen.</p></div>
+        <div class="card"><span class="ic">💧</span><h3>Water: de cijfers uit het dossier</h3><p>De aanvraag in het Omgevingsloket gaat over drie percelen van samen <strong>51.710 m²</strong>. Daarvan wordt <strong>2.658 m²</strong> waterondoorlatend verhard en <strong>954 m²</strong> in waterdoorlatende verharding aangelegd. Dat is ongeveer <strong>5 % ondoorlatende verharding</strong>, of 7 % als je alle verharding samen neemt. Het overgrote deel van het terrein blijft dus onverhard. Bovendien staat het project onder <strong>verhoogd toezicht van de dienst Integraal Waterbeleid</strong>: die rekent het volledige waterverhaal na volgens zeer strenge normen en zonder positief advies komt er geen vergunning. Het regenwater wordt <strong>gebufferd op eigen terrein</strong> en vertraagd afgevoerd. De beek op het terrein verdwijnt niet: ze wordt naar achteren verlegd en <strong>sterk verbreed</strong>, zodat er méér ruimte komt voor water om natuurlijk in te sijpelen.</p><a class="faqlink" href="#faq-water">Alle cijfers over water en verharding → FAQ</a></div>
         <div class="card"><span class="ic">🌲</span><h3>Het gebied achteraan blijft groen</h3><p>De school komt <strong>uitsluitend vooraan</strong>, op het deel dat al sinds jaar en dag in woonzone ligt. Het woonreservegebied achteraan blijft bij dit project <strong>onaangeroerd</strong>. De gemeente wil daar volgens de initiatiefnemers een <strong>park- en groenzone</strong> aanleggen, maar kan die stap pas zetten nadat de school effectief mag bouwen en dat achterste stuk aan de gemeente verkocht wordt. Het een hangt dus samen met het ander. Er zijn <strong>geen uitbreidingsplannen</strong>: de aanvraag bevat er geen, en de initiatiefnemers benadrukken dat het gebouw ook in de toekomst ruimschoots volstaat. Zonder dit project blijft dat gebied in onzekerheid: neemt de gemeente vóór <strong>1 januari 2040</strong> geen beslissing over de bestemming, dan stelt de Vlaamse Regering die zelf vast, op basis van bovenlokale noden.</p></div>
-        <div class="card"><span class="ic">🌱</span><h3>De school start klein en groeit mee</h3><p>Er komen niet meteen 600 leerlingen. De vzw wil van start gaan in het <strong>schooljaar 2027-2028</strong>, met ongeveer <strong>150 leerlingen in de eerste graad</strong>, en groeit daarna jaar na jaar mee met haar leerlingen; pas na zes jaar is de volle capaciteit bereikt. De buurt kan zich dus stap voor stap aanpassen, en aandachtspunten rond mobiliteit kunnen onderweg bijgestuurd worden.</p></div>
+        <div class="card"><span class="ic">🌱</span><h3>De school start klein en groeit mee</h3><p>Er komen niet meteen 600 leerlingen. De vzw wil van start gaan in het <strong>schooljaar 2027-2028</strong>, met ongeveer <strong>150 leerlingen in de eerste graad</strong>, en groeit daarna jaar na jaar mee met haar leerlingen; pas na zes jaar is de volle capaciteit bereikt. De buurt kan zich dus stap voor stap aanpassen, en aandachtspunten rond mobiliteit kunnen onderweg bijgestuurd worden.</p><a class="faqlink" href="#faq-groei">Komen er meteen 600 leerlingen? → FAQ</a></div>
         <div class="card"><span class="ic">📈</span><h3>De cijfers van de Vlaamse overheid</h3><p>Ranst valt onder de onderwijszone Lier, samen met Berlaar, Heist-op-den-Berg, Lint en Nijlen. De officiële capaciteitsprognose voor die zone laat zien dat het verwachte aantal leerlingen vanaf het schooljaar <strong>2026-2027</strong> boven de benutbare capaciteit uitkomt: 10.807 verwachte leerlingen tegenover 10.297 benutbare plaatsen, en daarna blijft dat aantal jaar na jaar stijgen. Het tekort is dus becijferd en niet louter een aanvoelen.</p></div>
-        <div class="card"><span class="ic">👂</span><h3>In overleg met de buurt</h3><p>De initiatiefnemers gingen al in gesprek met de buurt <strong>vóór</strong> de plannen vastlagen: op 7 november, 2 december, 22 januari en 23 juni, eerst met de directe buren en daarna met de ruimere omgeving. Uit die gesprekken kwamen bezorgdheden over leefbaarheid, privacy en verkeersveiligheid naar voren, en in samenspraak werden de plannen bijgestuurd: de groenbuffer langs beide zijden werd verbreed, het wandelpad werd ver van de perceelsgrenzen gelegd, er kwam een veilige doorsteek naar de Kempenlaan en de kiss-and-ridezone werd heringericht met 90°-parkeren zodat alle manoeuvres op eigen terrein blijven. Op het laatste overleg kwamen er geen bouwtechnische opmerkingen meer.</p></div>
-        <div class="card"><span class="ic">🤝</span><h3>Een plek voor de gemeenschap</h3><p>Buiten de schooluren kan de turnzaal ook <strong>een meerwaarde zijn voor de gemeente</strong>. Infrastructuur zoals een turnzaal en lokalen staat bij een school een groot deel van de tijd leeg, terwijl kleine, lokale verenigingen in de streek net zoeken naar ruimte. Het gaat daarbij om <strong>kleine groepen</strong>: telkens één vereniging per avond, tot uiterlijk 22 uur. Zo levert het project iets terug aan de buurt, zonder de dagelijkse drukte die een winkel, kantoor of grootschalig woonproject met zich meebrengt.</p></div>
+        <div class="card"><span class="ic">👂</span><h3>In overleg met de buurt</h3><p>De initiatiefnemers gingen al in gesprek met de buurt <strong>vóór</strong> de plannen vastlagen: op 7 november, 2 december, 22 januari en 23 juni, eerst met de directe buren en daarna met de ruimere omgeving. Uit die gesprekken kwamen bezorgdheden over leefbaarheid, privacy en verkeersveiligheid naar voren, en in samenspraak werden de plannen bijgestuurd: de groenbuffer langs beide zijden werd verbreed, het wandelpad werd ver van de perceelsgrenzen gelegd, er kwam een veilige doorsteek naar de Kempenlaan en de kiss-and-ridezone werd heringericht met 90°-parkeren zodat alle manoeuvres op eigen terrein blijven. Op het laatste overleg kwamen er geen bouwtechnische opmerkingen meer.</p><a class="faqlink" href="#faq-overleg">Wat er concreet werd aangepast → FAQ</a></div>
+        <div class="card"><span class="ic">🤝</span><h3>Een plek voor de gemeenschap</h3><p>Buiten de schooluren kan de turnzaal ook <strong>een meerwaarde zijn voor de gemeente</strong>. Infrastructuur zoals een turnzaal en lokalen staat bij een school een groot deel van de tijd leeg, terwijl kleine, lokale verenigingen in de streek net zoeken naar ruimte. Het gaat daarbij om <strong>kleine groepen</strong>: telkens één vereniging per avond, tot uiterlijk 22 uur. Zo levert het project iets terug aan de buurt, zonder de dagelijkse drukte die een winkel, kantoor of grootschalig woonproject met zich meebrengt.</p><a class="faqlink" href="#faq-turnzaal">Geeft dat ’s avonds geen overlast? → lees het in de FAQ</a></div>
         <div class="card"><span class="ic">🌍</span><h3>Toekomstbestendig</h3><p>Onze jongeren verdienen onderwijs dat hen voorbereidt op een snel veranderende wereld: kritisch denken, samenwerken, initiatief nemen en zelfstandig leren.</p></div>
         <div class="card"><span class="ic">🚏</span><h3>Een goed gelegen plek</h3><p>De site ligt strategisch op de grens van Ranst en Wommelgem en speelt zo in op de capaciteitsnood in beide gemeenten. Er zijn <strong>haltes van het openbaar vervoer vlak bij het domein</strong>, en de ontsluiting verloopt via de Kromstraat, een gewestweg, maar <strong>niet rechtstreeks aan de Kromstraat</strong>, zodat er geen extra manoeuvres of filevorming op de weg zelf ontstaan. Door de nabijheid van die gewestweg blijft de achterliggende woonwijk maximaal ontlast. Het verkeer van en naar de school wordt dus opgevangen aan de rand van de wijk.</p></div>
         <div class="card"><span class="ic">📊</span><h3>Beperkte verkeersimpact</h3><p>In Wommelgem blijkt bij drie lagere scholen in de buurt dat de verkeersimpact van een school beperkt blijft. Bij een <strong>middelbare</strong> school is die impact nog kleiner: tieners willen op die leeftijd niet meer met de auto worden afgezet en komen veel vaker zelfstandig met de fiets, te voet of met het openbaar vervoer. De school zet sterk in op fietsen: de initiatiefnemers rekenen op ongeveer <strong>80 % fietsers</strong>. Er zijn <strong>17 parkeerplaatsen</strong> voorzien, precies volgens de geldende normen. Bewust niet meer: in overleg met de buurt kwam naar voren dat een groot parkeerterrein autogebruik juist zou aanmoedigen. Te weinig plaatsen is geen goede zaak, te veel evenmin, dus volgt het ontwerp de norm. De kiss-and-ridezone heeft 90°-parkeren, zodat alle manoeuvres <strong>op eigen terrein</strong> gebeuren en niet in de straat.</p></div>
@@ -458,7 +471,7 @@ Ik hoop dat het bestuur deze kans voor onze gemeente grijpt, en vraag om een gun
 Met vriendelijke groet,
 [Je naam en woonplaats]</div>
       </div>
-      <p class="note">Tip: start met de eerste zin die in de voorbeeldtekst staat, maar personaliseer de tekst echt met iets persoonlijks uit je eigen situatie dat voor jou belangrijk is (bv. “mijn kinderen fietsen nu dagelijks 12 km naar school”). Eigen, oprechte verhalen uit het hart maken meer indruk dan een identieke standaardtekst.</p>
+      <p class="note">Tip: start met de eerste zin die in de voorbeeldtekst staat, maar personaliseer de tekst zeker met iets persoonlijks uit je eigen situatie dat voor jou belangrijk is (bv. “mijn kinderen fietsen nu dagelijks 12 km naar school”).<br>Eigen, oprechte verhalen uit het hart maken meer indruk dan een identieke standaardtekst.</p>
     </div>
   </section>
 
@@ -480,7 +493,7 @@ Met vriendelijke groet,
         <summary>Is er echt een capaciteitstekort, of is dat een aanname?</summary>
         <p>Dat is becijferd. Ranst hoort bij de onderwijszone Lier, samen met Berlaar, Heist-op-den-Berg, Lint en Nijlen. In de capaciteitsprognose voor die zone ligt het verwachte aantal leerlingen vanaf het schooljaar <strong>2026-2027</strong> hoger dan de benutbare capaciteit: 10.807 verwachte leerlingen tegenover 10.297 benutbare plaatsen. In de jaren nadien blijft het verwachte aantal stijgen tot boven de 10.900. Dat is ook de reden waarom de Vlaamse overheid subsidies voor deze school voorziet.</p>
       </details>
-      <details>
+      <details id="faq-verkeer">
         <summary>Is een school aan een verbindingsweg wel veilig?</summary>
         <p>Precies daarom is de inplanting zo gekozen. De school sluit aan op de <strong>gewestweg</strong>, maar de toegang ligt <strong>niet rechtstreeks aan de Kromstraat</strong>, zodat er geen manoeuvres of aanschuivende auto's op de weg zelf komen. Alle parkeren en alle manoeuvres gebeuren <strong>op eigen terrein</strong>, via een kiss-and-ridezone met 90°-parkeren. Er kwam ook een aparte doorsteek naar de Kempenlaan, zodat leerlingen veilig te voet en met de fiets binnenkomen zonder de woonwijk te belasten. Rond de site ligt bovendien veel openbaar domein, wat extra ruimte geeft om het verkeer veilig in te richten. En de definitieve verkeersinrichting wordt niet door de school alleen bepaald: het <strong>Agentschap Wegen en Verkeer</strong> moet zich over de ontsluiting uitspreken. Daarbij komt dat de gemeente zelf aan de Kromstraat wil werken: in het <a href="https://www.ranst.be/meerjarenplan" target="_blank" rel="noopener">meerjarenplan 2026-2031 van Ranst</a> staat onder volgnummer <strong>RA000896</strong> een krediet van 20.000 euro voor 2026 voor de Kromstraat, als gemeentelijk aandeel, prefinanciering van fietspadsubsidies en ereloon. Dat is nog een voorbereidend budget en geen aanleg, maar het toont dat een veiliger fietsinrichting van deze gewestweg (de N116) ook bij de gemeente op de agenda staat.</p>
       </details>
@@ -488,7 +501,7 @@ Met vriendelijke groet,
         <summary>Er verdwijnt toch een mooie weide? Ranst is al zo volgebouwd.</summary>
         <p>Dat gevoel is begrijpelijk, maar het voorste deel van de site is <strong>geen weide met een beschermd statuut: het ligt al sinds jaar en dag in woonzone</strong>, dus het is bouwgrond. Dat kan iedereen zelf nakijken op <a href="https://www.geopunt.be/shared/2b528254-6dd2-4c9d-9bb8-b0b4505ba79b" target="_blank" rel="noopener">Geopunt, het officiële kaartenloket van de Vlaamse overheid</a>. De <strong>rode zone loopt over alle drie de percelen</strong>: in de legende van het gewestplan staat <strong>rood voor woongebied</strong> en <strong>wit met rode blokjes (arcering) voor woonuitbreidingsgebied</strong>, vandaag woonreservegebied genoemd (die legende is o.a. terug te vinden in <a href="https://omgeving.vlaanderen.be/sites/default/files/2022-01/RVR_Lanaken_ENA.pdf" target="_blank" rel="noopener">officiële rapporten van de Vlaamse overheid</a>). De eigenaars willen verkopen, en bouwgrond in woonzone is schaars en gegeerd. De vraag is dus niet óf er hier iets komt, maar <strong>wát</strong> er komt. En woongebied laat heel veel toe. Dat staat zwart op wit in <a href="https://codex.vlaanderen.be/PrintDocument.ashx?geannoteerd=false&amp;id=1005507" target="_blank" rel="noopener">artikel 5.1.0 van de gewestplanvoorschriften</a> (omzendbrief van 8 juli 1997 bij het koninklijk besluit van 28 december 1972): woongebieden zijn bestemd voor “wonen, alsmede voor handel, dienstverlening, ambacht en kleinbedrijf […] voor groene ruimten, voor sociaal-culturele inrichtingen, voor openbare nutsvoorzieningen, voor toeristische voorzieningen, voor agrarische bedrijven”. Op deze gronden gelden bovendien <strong>geen bijkomende voorschriften</strong>, en net dat maakt ze zo gegeerd bij projectontwikkelaars. Concreet kan hier dus evengoed een <strong>grootschalig cohousingproject</strong> komen: met dezelfde vloeroppervlakte als de school, ongeveer 5.200 m², gaat het naar schatting over <strong>120 à 150 bewoners</strong>, elke dag van het jaar. Of sociale woningen in een samenwoonproject, een <strong>jeugdinstelling</strong> of opvangcentrum, een grote winkel, supermarkt, horecazaak, kantoor of andere dienstverlening, of een grotere zorg- of gemeenschapsvoorziening. In veel van die scenario's wordt er intensiever gebouwd en verhard dan bij deze school, waar ongeveer 7 % van de 51.710 m² verhard wordt. Bovendien blijft bij dit project het gebied achteraan onaangeroerd, en wil de gemeente daar volgens de initiatiefnemers een park- en groenzone aanleggen. Wie de open ruimte wil behouden, heeft met deze school dus meer kans op blijvend groen dan zonder.</p>
       </details>
-      <details>
+      <details id="faq-water">
         <summary>Hoe zit het met water en verharding?</summary>
         <p>De cijfers uit het dossier zelf spreken hier voor zich. De aanvraag in het Omgevingsloket betreft drie percelen met een gezamenlijke oppervlakte van <strong>51.710 m²</strong>. Daarvan wordt <strong>2.658 m² waterondoorlatend</strong> verhard en komt er <strong>954 m² waterdoorlatende</strong> verharding bij. Dat is ongeveer <strong>5,14 % ondoorlatende verharding</strong>, of ongeveer <strong>7 %</strong> als je alle verharding samen neemt. Het overgrote deel van de site blijft dus onverhard, en die cijfers zijn na te lezen in de plannen die in het Omgevingsloket ter inzage liggen. Daarbovenop staat dit project onder <strong>verhoogd toezicht van de dienst Integraal Waterbeleid</strong>. Die dienst rekent het volledige waterverhaal na volgens zeer strenge normen, en zonder haar positief advies wordt er geen vergunning verleend. Het regenwater wordt <strong>gebufferd op eigen terrein</strong> en vertraagd afgevoerd naar de riolering, zodat het niet naar de omliggende tuinen en kelders stroomt.</p>
       </details>
@@ -504,9 +517,9 @@ Met vriendelijke groet,
         <summary>Geeft een school met 600 leerlingen geen geluidshinder?</summary>
         <p>De impact blijft beperkt, en dat is ook onderzocht. Voor geluid gelden <strong>strenge milieunormen</strong>, en de initiatiefnemers lieten een <strong>geluidsstudie</strong> uitvoeren die ook het geluid van spelende kinderen meerekent. Die studie blijft <strong>binnen alle geldende geluidsnormen</strong>, gemeten aan het eerste aangrenzende perceel. Daarnaast zitten leerlingen het grootste deel van de dag in de klas en komen ze enkel tijdens de pauzes naar buiten, 2 tot 3 keer per dag. Daarbuiten is het rustig op de site, en op de weekends en in alle schoolvakanties is er geen schoolactiviteit. Buiten de schooluren kan de turnzaal wel ter beschikking staan van kleine, lokale verenigingen, maar dat gaat om heel kleine groepen: telkens één vereniging per avond, met in het drukste geval ongeveer 26 aanwezigen en in de praktijk minder. Dat blijft van een heel andere orde dan wat er in woongebied nog allemaal kan komen: een grootschalig woonproject, een winkel, een horecazaak of een grote zorg- of gemeenschapsvoorziening, met activiteit de hele week door.</p>
       </details>
-      <details>
+      <details id="faq-turnzaal">
         <summary>Wordt de turnzaal 's avonds gebruikt? Geeft dat geen overlast?</summary>
-        <p>De turnzaal kan na de schooluren gebruikt worden door <strong>kleine, lokale verenigingen en kleine groepen</strong>, tot uiterlijk <strong>22 uur</strong>. Het gaat om beperkte aantallen: de zaal wordt per avond aan <strong>één vereniging</strong> verhuurd, die de volledige ruimte gebruikt, zodat er nooit meerdere activiteiten tegelijk doorgaan. Volgens de nota bij de aanvraag komt dat neer op <strong>maximaal ongeveer 26 aanwezigen</strong> in het drukste scenario (volleybal met twee velden), en in de praktijk ligt dat aantal doorgaans lager: bij zaalvoetbal, basketbal of turnen gaat het om zo'n 10 tot 20 personen. Voor het parkeren verandert dat weinig: die aantallen passen ruim binnen de 17 parkeerplaatsen op eigen terrein, en het gebeurt buiten de spitsuren. Zo krijgt het verenigingsleven van Ranst extra ruimte, zonder dat de buurt er 's avonds hinder van hoeft te ondervinden.</p>
+        <p>De turnzaal kan na de schooluren gebruikt worden door <strong>kleine, lokale verenigingen en kleine groepen</strong>, tot uiterlijk <strong>22 uur</strong>. Het gaat om beperkte aantallen: de zaal wordt per avond aan <strong>één vereniging</strong> verhuurd, die de volledige ruimte gebruikt, zodat er nooit meerdere activiteiten tegelijk doorgaan. Volgens de nota bij de aanvraag komt dat neer op <strong>maximaal ongeveer 26 aanwezigen</strong> in het drukste scenario (volleybal met twee velden), en in de praktijk ligt dat aantal doorgaans lager: bij zaalvoetbal, basketbal of turnen gaat het om zo'n 10 tot 20 personen. Voor het parkeren verandert dat weinig: die aantallen passen ruim binnen de 17 parkeerplaatsen op eigen terrein, en het gebeurt buiten de spitsuren. Zo krijgt het verenigingsleven van Ranst extra ruimte, zonder dat de buurt er 's avonds hinder van hoeft te ondervinden. Belangrijk: het gaat uitdrukkelijk om <strong>kleinschalig, recreatief gebruik</strong> en <strong>geen competitie of wedstrijden</strong>. Er komen dus geen supporters, geen publiek en geen toeschouwers naar de site, en er is <strong>geen cafetaria of kantine</strong> waar na de sportsessie nagefeest wordt. De verenigingen komen sporten en gaan daarna naar huis, met de zaal die uiterlijk om 22 uur sluit.</p>
       </details>
       <details>
         <summary>Hoeveel bomen moeten er verdwijnen?</summary>
@@ -516,7 +529,7 @@ Met vriendelijke groet,
         <summary>Is de school niet te klein voor 600 leerlingen?</summary>
         <p>Het gebouw is ontworpen volgens de <strong>oppervlaktenormen van AGION</strong>, het Agentschap voor Infrastructuur in het Onderwijs van de Vlaamse overheid, en volgens de initiatiefnemers wordt aan al die normen voldaan. Diezelfde normen vormen ook de basis waarop de Vlaamse overheid schoolgebouwen subsidieert. Een vergelijking met bijvoorbeeld het VTI van Zandhoven ligt minder voor de hand, omdat dat een <strong>praktijkschool</strong> is met werkplaatsen, machines en technische ateliers. Voor zo'n school gelden heel andere en veel ruimere oppervlaktenormen. Deze school richt zich op <strong>theoretische richtingen</strong>, waarvoor andere normen van toepassing zijn. Scholen met een verschillend aanbod naast elkaar leggen op basis van vierkante meters zegt dus weinig over de kwaliteit of de haalbaarheid.</p>
       </details>
-      <details>
+      <details id="faq-groei">
         <summary>Komen er meteen 600 leerlingen?</summary>
         <p>Nee. De vzw wil van start gaan in het schooljaar <strong>2027-2028</strong>, met ongeveer 150 leerlingen in de eerste graad (1ste en 2de jaar). Daarna groeit de school jaar na jaar mee met haar leerlingen. Pas na zes jaar wordt het volledige aantal van 600 bereikt. Dat geeft de buurt en de gemeente ruim de tijd om mee te evolueren en om onderweg bij te sturen waar nodig.</p>
       </details>
@@ -524,7 +537,7 @@ Met vriendelijke groet,
         <summary>Krijgen jongeren uit Ranst en Wommelgem voorrang?</summary>
         <p>De wetgeving verbiedt scholen om voorrang te geven op basis van woonafstand. Dat geldt voor élke school in Vlaanderen. Maar in de praktijk komt deze school terecht in het <strong>inschrijvingssysteem van Ranst</strong>, als enige middelbare school in de gemeente. Ouders schrijven hier dus heel bewust en gericht in, en kunnen deze school niet als reservekeuze aanhouden naast een inschrijving in bijvoorbeeld Antwerpen. Er komt bovendien een samenwerking met de basisscholen van Ranst en Wommelgem. Zo ontstaat er een gerichte vraag uit de eigen streek, zodat er elders in de regio plaatsen vrij, wat de keuzemogelijkheden voor alle jongeren verbetert.</p>
       </details>
-      <details>
+      <details id="faq-overleg">
         <summary>Is er wel geluisterd naar de bezorgdheden van de buurt?</summary>
         <p>Ja, en dat gebeurde bovendien <em>vóór</em> de plannen vastlagen, niet pas toen het gele bord verscheen. Er waren gesprekken met de buurt op 7 november, 2 december, 22 januari en 23 juni, eerst met de directe buren en daarna met de ruimere omgeving. Elke ronde leidde tot concrete aanpassingen: de groenbuffer langs beide zijden van het gebouw werd verbreed, het wandelpad werd ver van de perceelsgrenzen ingeplant om inkijk en geluidshinder te vermijden, er kwam een veilige doorsteek naar de Kempenlaan zodat de achterliggende woonwijk ontlast blijft, en de kiss-and-ridezone werd heringericht met 90°-parkeren zodat alle manoeuvres op eigen terrein gebeuren. Op het laatste overleg kwamen er geen bouwtechnische opmerkingen meer.</p>
       </details>
@@ -593,7 +606,11 @@ Met vriendelijke groet,
     <div class="wrap">
       <h2>Samen geven we onze jongeren een toekomst dichtbij</h2>
       <p>Het duurt maar 5 minuten. Open het e-loket, kies “(Ver)bouwen-verkavelen” en plak de tekst.</p>
-      <a class="btn big gold" href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Maak nu je positieve melding →</a>
+      <div class="band-cta">
+        <a class="btn big gold" href="https://eloket.ranst.be/nl/melding-of-vraag-aan-gemeente-ranst" target="_blank" rel="noopener">Maak nu je positieve melding →</a>
+        <a class="btn big ghost" href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart downloaden en mee verspreiden</a>
+      </div>
+      <p class="band-note">Help mee bekendmaken: verspreid de infokaart door hem af te geven of door te sturen aan buren, ouders of vrienden.</p>
     </div>
   </section>
 
@@ -614,7 +631,8 @@ Met vriendelijke groet,
     </div>
     <div>
       <h4>Deel deze pagina</h4>
-      <p>Help mee: stuur deze pagina door naar buren, ouders en sympathisanten die het project een warm hart toedragen.</p>
+      <p>Help mee: stuur deze pagina of de infokaart door naar buren, ouders en sympathisanten die het project een warm hart toedragen.<br>
+      <a href="Infokaart%20-%20Nieuwe%20middelbare%20school%20Ranst.pdf" download>Infokaart downloaden en mee verspreiden</a></p>
     </div>
   </div>
   <div class="disc">
@@ -696,6 +714,29 @@ Met vriendelijke groet,
       }
     });
   }
+  /* FAQ-item automatisch openklappen wanneer er vanuit een kaart naar verwezen
+     wordt (link met #faq-...), of wanneer de pagina met zo'n hash geopend wordt. */
+  function openFaq(hash){
+    if (!hash || hash.indexOf('#faq-') !== 0) return false;
+    const item = document.querySelector(hash);
+    if (!item || item.tagName.toLowerCase() !== 'details') return false;
+    item.open = true;
+    item.scrollIntoView({behavior:'smooth', block:'start'});
+    item.classList.add('spot');
+    setTimeout(() => item.classList.remove('spot'), 2600);
+    return true;
+  }
+  document.querySelectorAll('a.faqlink').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const hash = a.getAttribute('href');
+      if (openFaq(hash)){
+        e.preventDefault();
+        history.replaceState(null, '', hash);
+      }
+    });
+  });
+  window.addEventListener('hashchange', () => openFaq(location.hash));
+  if (location.hash) setTimeout(() => openFaq(location.hash), 120);
 </script>
 
 </body>
