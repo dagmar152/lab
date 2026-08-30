@@ -7,7 +7,14 @@
 > vóór een `git push --force` (force overschrijft wat er online staat).
 
 ```bash
-cd "/Users/dagmar/Library/Mobile Documents/com~apple~CloudDocs/MijnBestanden/Data/Valentin en Jozefien/Lab School Ranst" && git pull --rebase && git add index.html CNAME && git commit -m "Beschrijving" && git push 'https://ranstverdientschool:<token>@github.com/ranstverdientschool/ranstverdientschool.github.io.git' main
+
+  cd "/Users/dagmar/Library/Mobile Documents/com~apple~CloudDocs/MijnBestanden/Data/Valentin en Jozefien/Lab School Ranst" \
+  && git add index.html CNAME \
+  && git commit -m "Beschrijving van je wijziging" \
+  && git pull --rebase \
+  && git push 'https://ranstverdientschool:<token>@github.com/ranstverdientschool/ranstverdientschool.github.io.git' main
+
+
 ```
 
 Controleren:
